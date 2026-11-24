@@ -23,6 +23,8 @@ content:
       - { name: photoAccueil, label: Photo d'accueil, type: image }
       - { name: photoHistoire, label: Photo de la page Notre histoire, type: image }
       - { name: galerie, label: Galerie de l'accueil, type: image, list: true }
+      - { name: video, label: Vidéo de l'accueil (fichier mp4), type: file }
+      - { name: videoPoster, label: Image affichée avant la vidéo, type: image }
       - { name: lienCarteCadeau, label: Lien de paiement de la carte cadeau (Stripe), type: string }
       - { name: url, label: Adresse du site, type: string }
       - { name: formAction, label: "Adresse d'envoi des formulaires (laisser vide)", type: string }

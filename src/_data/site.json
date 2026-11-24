@@ -12,12 +12,14 @@
   "fondatrice": "Georgia",
   "formAction": "",
   "lienCarteCadeau": "",
-  "photoAccueil": "/assets/img/chambre-decoree.jpg",
+  "photoAccueil": "/assets/img/chambre-te-amo-large.jpg",
   "photoHistoire": "/assets/img/couloir-petales.jpg",
   "galerie": [
     "/assets/img/chambre-coeur.jpg",
-    "/assets/img/spa-duo.jpg",
     "/assets/img/couloir-petales.jpg",
-    "/assets/img/soins-huile-doree.jpg"
-  ]
+    "/assets/img/box-gourmande.jpg",
+    "/assets/img/spa-duo.jpg"
+  ],
+  "video": "/assets/img/chambre-video.mp4",
+  "videoPoster": "/assets/img/chambre-video-poster.jpg"
 }

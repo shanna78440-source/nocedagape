@@ -51,6 +51,10 @@ description: "Escapades romantiques clés en main à Paris pour jeunes mariés e
   <div class="wrap">
     <h2 class="center">Nos chambres décorées</h2>
     <p class="center sub">Quelques escapades préparées par Les Noces d'Agapé.</p>
+    {% if site.video %}<div class="video-split">
+      <video src="{{ site.video }}" poster="{{ site.videoPoster }}" autoplay muted loop playsinline preload="metadata" aria-label="Visite d'une chambre décorée par Les Noces d'Agapé"></video>
+      <div><h3>Une chambre préparée pour vous</h3><p>Pétales de rose en cœur, ballons, coffret cadeau sur le lit : à votre arrivée, tout est prêt. La décoration est pensée selon vos goûts et votre formule.</p><a class="btn" href="/demande/">Demander mon escapade</a></div>
+    </div>{% endif %}
     <div class="galerie">{% for g in site.galerie %}<img src="{{ g }}" alt="Chambre d'hôtel décorée par Les Noces d'Agapé" loading="lazy">{% endfor %}</div>
   </div>
 </section>
