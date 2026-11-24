@@ -123,3 +123,6 @@ p{margin:0 0 1em}
 .hero-photo *{color:#fff}.hero-photo .lead,.hero-photo .reassure{color:#f3ebe7}.hero-photo .btn-ghost{border-color:#fff}
 .rounded{border-radius:20px;margin-bottom:2rem}
 .head-noir .prix{color:#fff} input[type=radio],input[type=checkbox]{accent-color:var(--rose-fonce)}
+.galerie{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.galerie img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px}
+.hero-photo{background-position:center 60%!important}

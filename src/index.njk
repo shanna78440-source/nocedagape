@@ -48,6 +48,14 @@ description: "Escapades romantiques clés en main à Paris pour jeunes mariés e
 </section>
 
 <section class="section alt">
+  <div class="wrap">
+    <h2 class="center">Nos chambres décorées</h2>
+    <p class="center sub">Quelques escapades préparées par Les Noces d'Agapé.</p>
+    <div class="galerie">{% for g in site.galerie %}<img src="{{ g }}" alt="Chambre d'hôtel décorée par Les Noces d'Agapé" loading="lazy">{% endfor %}</div>
+  </div>
+</section>
+
+<section class="section">
   <div class="wrap narrow center">
     <h2>Ce qu'en disent les couples</h2>
     {% for t in temoignages %}
