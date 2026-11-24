@@ -15,6 +15,7 @@ permalink: "/formules/{{ f.slug }}/"
 </div></section>
 <section class="section"><div class="wrap split">
   <div>
+    {% if f.photo %}<img class="rounded" src="{{ f.photo }}" alt="Formule {{ f.nom }}, Les Noces d'Agapé" loading="lazy">{% endif %}
     <h2>L'expérience</h2>
     <p>{{ f.description }}</p>
     <p><strong>Pour qui ?</strong> {{ f.pourQui }}</p>

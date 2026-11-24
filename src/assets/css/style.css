@@ -118,7 +118,7 @@ p{margin:0 0 1em}
 .site-footer .logo em{color:var(--rose)}
 .site-footer .small{color:#a99e99}
 .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px}
-.card-img{width:calc(100% + 56px);margin:-28px -28px 20px;aspect-ratio:4/3;object-fit:cover;border-radius:20px 20px 0 0}
+.card-img{width:calc(100% + 56px);max-width:none;margin:-28px -28px 20px;aspect-ratio:4/3;object-fit:cover;border-radius:20px 20px 0 0}
 .hero-photo{background:linear-gradient(rgba(29,26,25,.45),rgba(29,26,25,.55)),var(--hero) center/cover}
 .hero-photo *{color:#fff}.hero-photo .lead,.hero-photo .reassure{color:#f3ebe7}.hero-photo .btn-ghost{border-color:#fff}
 .rounded{border-radius:20px;margin-bottom:2rem}

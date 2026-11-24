@@ -30,7 +30,7 @@
         "r": "Oui, la promenade en bateau-mouche avec portrait de couple et le cocktail en rooftop sont proposés en option, sur devis."
       }
     ],
-    "photo": ""
+    "photo": "/assets/img/box-elegance.jpg"
   },
   {
     "slug": "evasion",
@@ -65,7 +65,7 @@
         "r": "Nous réservons pour vous un dîner insolite, dans le noir ou en croisière. Le repas est réglé par le couple sur place."
       }
     ],
-    "photo": ""
+    "photo": "/assets/img/soins-huiles.jpg"
   },
   {
     "slug": "agape",
@@ -100,6 +100,6 @@
         "r": "Oui, Agapé est pensé pour tous les grands moments du couple : nuit de noces, anniversaire de mariage, renouvellement des vœux."
       }
     ],
-    "photo": ""
+    "photo": "/assets/img/soins-huile-doree.jpg"
   }
 ]
