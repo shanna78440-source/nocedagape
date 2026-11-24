@@ -1,0 +1,32 @@
+---
+layout: base.njk
+title: Nos formules d'escapade romantique
+description: "Comparez les formules Élégance (350 €), Évasion (490 €) et Agapé (700 €) : nuit d'hôtel 4 ou 5 étoiles à Paris décorée, box couple, bien-être et petit déjeuner, tout compris."
+---
+<section class="page-head"><div class="wrap">
+  <p class="eyebrow">Formules</p>
+  <h1>Nos formules d'escapade romantique</h1>
+  <p class="lead">Trois formules tout compris pour une nuit à deux à Paris, hôtel inclus. Choisis celle qui vous ressemble, ou demande-nous une offre sur mesure.</p>
+</div></section>
+<section class="section"><div class="wrap">
+  <div class="cards">{% for f in formules %}{% include "carte-formule.njk" %}{% endfor %}</div>
+</div></section>
+<section class="section alt"><div class="wrap">
+  <h2 class="center">Comparatif détaillé</h2>
+  <div class="table-wrap">
+  <table class="compare">
+    <thead><tr><th></th>{% for f in formules %}<th>{{ f.nom }}<br><span>{{ f.prix | euro }}</span></th>{% endfor %}</tr></thead>
+    <tbody>
+      <tr><th>Hôtel</th>{% for f in formules %}<td>{{ f.hotel }}</td>{% endfor %}</tr>
+      <tr><th>Décoration de chambre</th><td>Romantique</td><td>Deluxe</td><td>Romantique, accueil VIP</td></tr>
+      <tr><th>Bien-être</th><td>Box bien-être</td><td>Spa, hammam, sauna</td><td>Espace bien-être 5 étoiles</td></tr>
+      <tr><th>Box</th><td>Nude et rose poudré</td><td>Terracotta</td><td>Noire</td></tr>
+      <tr><th>Bilan de couple en visio</th><td>Oui</td><td>Oui</td><td>Oui</td></tr>
+      <tr><th>Petit déjeuner</th><td>Gourmand</td><td>Gourmet</td><td>Gastronomique en chambre</td></tr>
+      <tr><th>Restaurant</th><td>Réservation</td><td>Dîner insolite réservé</td><td>Dîner avec vue réservé</td></tr>
+      <tr><th>Cadeau</th><td>Carnet</td><td>Tee-shirts duo</td><td>Bougies parfumées, champagne</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="center small">Repas au restaurant à la charge du couple. Départ tardif à 14 h selon disponibilité de l'hôtel.</p>
+</div></section>

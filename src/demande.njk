@@ -1,0 +1,77 @@
+---
+layout: base.njk
+title: Demander mon escapade romantique
+description: "Demande ton escapade romantique Les Noces d'Agapé en 2 minutes : formule, dates, options. Réponse de Georgia sous 24 heures."
+---
+<section class="page-head"><div class="wrap">
+  <p class="eyebrow">Demande</p>
+  <h1>Demander mon escapade</h1>
+  <p class="lead">Remplis ce formulaire en 2 minutes. Georgia te répond sous {{ site.delaiReponse }} pour confirmer l'hôtel, puis t'envoie un lien de paiement sécurisé. Aucun paiement n'est demandé à cette étape.</p>
+</div></section>
+<section class="section"><div class="wrap narrow">
+<form class="form" name="demande" method="POST" action="{{ site.formAction or '/merci/' }}" data-netlify="true" netlify-honeypot="site-web">
+  <input type="hidden" name="form-name" value="demande">
+  <p class="hidden"><label>Ne pas remplir <input name="site-web"></label></p>
+
+  <fieldset>
+    <legend>Ta formule</legend>
+    <div class="choices">
+    {% for f in formules %}
+      <label class="choice"><input type="radio" name="formule" value="{{ f.nom }}" data-slug="{{ f.slug }}" required{% if loop.first %} checked{% endif %}> <span><strong>{{ f.nom }}</strong> {{ f.prix | euro }}</span></label>
+    {% endfor %}
+      <label class="choice"><input type="radio" name="formule" value="Sur mesure" data-slug="sur-mesure"> <span><strong>Sur mesure</strong> sur devis</span></label>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>L'occasion</legend>
+    <label>C'est pour…
+      <select name="occasion">
+        <option>Notre nuit de noces</option>
+        <option>Un anniversaire de mariage</option>
+        <option>Une escapade pour se retrouver</option>
+        <option>Une surprise pour mon conjoint</option>
+        <option>Autre</option>
+      </select>
+    </label>
+    <div class="row">
+      <label>Date souhaitée <input type="date" name="date-1" required></label>
+      <label>Autre date possible <input type="date" name="date-2"></label>
+    </div>
+    <label>Nombre de nuits
+      <select name="nuits"><option>1 nuit</option><option>2 nuits</option><option>3 nuits ou plus</option></select>
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Options (sur devis)</legend>
+    <div class="checks">
+    {% for o in options %}<label><input type="checkbox" name="options" value="{{ o.nom }}"> {{ o.nom }}</label>{% endfor %}
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Vos envies</legend>
+    <label>Allergies, préférences, couleurs, petits détails qui comptent pour vous
+      <textarea name="envies" rows="4"></textarea>
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Tes coordonnées</legend>
+    <div class="row">
+      <label>Prénom et nom <input name="nom" autocomplete="name" required></label>
+      <label>Téléphone <input type="tel" name="telephone" autocomplete="tel"></label>
+    </div>
+    <label>Email <input type="email" name="email" autocomplete="email" required></label>
+    <label class="inline"><input type="checkbox" name="consentement" required> J'accepte que mes informations soient utilisées pour traiter ma demande (voir la <a href="/confidentialite/">politique de confidentialité</a>).</label>
+  </fieldset>
+
+  <button class="btn" type="submit">Envoyer ma demande</button>
+  <p class="small">{{ site.annulation }}</p>
+</form>
+</div></section>
+<script>
+const s=new URLSearchParams(location.search).get('formule');
+if(s){const r=document.querySelector(`input[data-slug="${CSS.escape(s)}"]`);if(r)r.checked=true;}
+</script>

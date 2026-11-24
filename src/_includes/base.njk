@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}{% if title != site.nom %} | {{ site.nom }}{% endif %}</title>
+<meta name="description" content="{{ description or site.promesse }}">
+<link rel="canonical" href="{{ page.url | abs(site.url) }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="{{ site.nom }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description or site.promesse }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": site.url + "/#organisation",
+  "name": site.nom,
+  "description": site.promesse,
+  "url": site.url,
+  "email": site.email,
+  "areaServed": { "@type": "AdministrativeArea", "name": "Île-de-France" },
+  "founder": { "@type": "Person", "name": site.fondatrice },
+  "priceRange": "350 € - 700 €",
+  "sameAs": ([site.instagram] if site.instagram else [])
+} | json | safe }}</script>
+{% if schema %}<script type="application/ld+json">{{ schema | json | safe }}</script>{% endif %}
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="/" aria-label="{{ site.nom }}, accueil">Les Noces <em>d'Agapé</em></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav">
+      <a href="/formules/">Formules</a>
+      <a href="/options/">Options</a>
+      <a href="/carte-cadeau/">Carte cadeau</a>
+      <a href="/notre-histoire/">Notre histoire</a>
+      <a href="/faq/">FAQ</a>
+      <a class="btn btn-small" href="/demande/">Demander mon escapade</a>
+    </nav>
+  </div>
+</header>
+<main id="contenu">
+{{ content | safe }}
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="logo">Les Noces <em>d'Agapé</em></p>
+      <p>{{ site.slogan }}. {{ site.zone }}.</p>
+    </div>
+    <div>
+      <p><a href="/formules/">Nos formules</a><br><a href="/carte-cadeau/">Offrir une escapade</a><br><a href="/faq/">Questions fréquentes</a><br><a href="/demande/">Faire une demande</a></p>
+    </div>
+    <div>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a>{% if site.instagram %}<br><a href="{{ site.instagram }}" rel="me">Instagram : {{ site.instagramNom }}</a>{% endif %}</p>
+      <p class="small"><a href="/mentions-legales/">Mentions légales</a> · <a href="/cgv/">CGV</a> · <a href="/confidentialite/">Confidentialité</a></p>
+    </div>
+  </div>
+</footer>
+<script>
+const t=document.querySelector('.menu-toggle'),n=document.getElementById('nav');
+t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+</script>
+</body>
+</html>

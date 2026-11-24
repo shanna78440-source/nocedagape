@@ -1,0 +1,16 @@
+---
+layout: base.njk
+title: Options et activités en duo
+description: "Ajoutez une activité à votre escapade romantique à Paris : bateau-mouche, massage en duo, atelier parfum, cours de cuisine, montgolfière, shooting photo, garde d'enfants. Sur devis."
+---
+<section class="page-head"><div class="wrap">
+  <p class="eyebrow">Options</p>
+  <h1>Options et activités en duo</h1>
+  <p class="lead">Personnalise ton escapade avec une activité à deux, un soin ou une garde d'enfants. Toutes les options sont sur devis : indique-les simplement dans ta demande.</p>
+</div></section>
+<section class="section"><div class="wrap">
+  <div class="options">
+  {% for o in options %}<div class="option"><h3>{{ o.nom }}</h3><p>{{ o.detail }}</p></div>{% endfor %}
+  </div>
+  <p class="center"><a class="btn" href="/demande/">Demander mon escapade</a></p>
+</div></section>

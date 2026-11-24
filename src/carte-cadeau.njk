@@ -1,0 +1,37 @@
+---
+layout: base.njk
+title: Carte cadeau, offrir une escapade romantique
+description: "Offrez une escapade romantique à Paris aux jeunes mariés : carte cadeau Les Noces d'Agapé, formules Élégance, Évasion ou Agapé. Une idée de cadeau de mariage originale."
+---
+<section class="page-head"><div class="wrap">
+  <p class="eyebrow">Carte cadeau</p>
+  <h1>Offrir une escapade romantique</h1>
+  <p class="lead">Témoins, famille, amis : offrez aux mariés une nuit d'exception à Paris. Vous choisissez la formule, ils choisissent leurs dates.</p>
+</div></section>
+<section class="section"><div class="wrap">
+  <div class="cards">
+  {% for f in formules %}
+    <article class="card card-{{ f.couleur }}"><div class="card-top"><p class="eyebrow">Carte cadeau</p><h3>{{ f.nom }}</h3><p class="prix">{{ f.prix | euro }}<span>{{ f.prixMention }}</span></p></div><p>{{ f.pourQui }}</p><div class="card-actions"><a class="link" href="/formules/{{ f.slug }}/">Voir le contenu</a></div></article>
+  {% endfor %}
+  </div>
+</div></section>
+<section class="section alt"><div class="wrap narrow">
+  <h2>Commander une carte cadeau</h2>
+  {% if site.lienCarteCadeau %}<p><a class="btn" href="{{ site.lienCarteCadeau }}">Payer en ligne</a></p>{% endif %}
+  <form class="form" name="carte-cadeau" method="POST" action="{{ site.formAction or '/merci/' }}" data-netlify="true" netlify-honeypot="site-web">
+    <input type="hidden" name="form-name" value="carte-cadeau">
+    <p class="hidden"><label>Ne pas remplir <input name="site-web"></label></p>
+    <label>Formule offerte
+      <select name="formule">{% for f in formules %}<option>{{ f.nom }} ({{ f.prix | euro }})</option>{% endfor %}<option>Montant libre</option></select>
+    </label>
+    <div class="row">
+      <label>Ton prénom et nom <input name="nom" required></label>
+      <label>Ton email <input type="email" name="email" required></label>
+    </div>
+    <label>Prénoms des mariés <input name="maries" required></label>
+    <label>Message à écrire sur la carte <textarea name="message" rows="3"></textarea></label>
+    <label class="inline"><input type="checkbox" name="consentement" required> J'accepte que mes informations soient utilisées pour traiter ma commande.</label>
+    <button class="btn" type="submit">Commander la carte cadeau</button>
+    <p class="small">Georgia te répond sous {{ site.delaiReponse }} avec le lien de paiement et la carte à offrir. Carte valable 12 mois.</p>
+  </form>
+</div></section>

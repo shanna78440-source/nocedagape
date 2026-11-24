@@ -1,0 +1,83 @@
+# Espace d'édition (Pages CMS : https://app.pagescms.org)
+media:
+  input: src/assets/img
+  output: /assets/img
+
+content:
+  - name: site
+    label: Informations générales
+    type: file
+    path: src/_data/site.json
+    format: json
+    fields:
+      - { name: nom, label: Nom de la marque, type: string }
+      - { name: slogan, label: Slogan, type: string }
+      - { name: promesse, label: "Phrase de présentation (reprise par Google et les IA)", type: text }
+      - { name: email, label: Email de contact, type: string }
+      - { name: instagram, label: Lien Instagram, type: string }
+      - { name: instagramNom, label: Nom du compte Instagram, type: string }
+      - { name: zone, label: Zone couverte, type: string }
+      - { name: delaiReponse, label: Délai de réponse, type: string }
+      - { name: annulation, label: Conditions d'annulation (phrase courte), type: string }
+      - { name: fondatrice, label: Prénom de la fondatrice, type: string }
+      - { name: photoAccueil, label: Photo d'accueil, type: image }
+      - { name: photoHistoire, label: Photo de la page Notre histoire, type: image }
+      - { name: lienCarteCadeau, label: Lien de paiement de la carte cadeau (Stripe), type: string }
+      - { name: url, label: Adresse du site, type: string }
+      - { name: formAction, label: "Adresse d'envoi des formulaires (laisser vide)", type: string }
+
+  - name: formules
+    label: Formules et prix
+    type: file
+    path: src/_data/formules.json
+    format: json
+    list: true
+    fields:
+      - { name: nom, label: Nom, type: string }
+      - { name: slug, label: "Identifiant dans l'adresse (ne pas modifier)", type: string }
+      - { name: accroche, label: Accroche, type: string }
+      - { name: prix, label: Prix en euros, type: number }
+      - { name: prixMention, label: Mention sous le prix, type: string }
+      - { name: photo, label: Photo, type: image }
+      - { name: hotel, label: Type d'hôtel, type: string }
+      - { name: pourQui, label: Pour qui, type: text }
+      - { name: description, label: Description, type: text }
+      - { name: inclus, label: Ce qui est inclus, type: string, list: true }
+      - name: faq
+        label: Questions sur cette formule
+        type: object
+        list: true
+        fields:
+          - { name: q, label: Question, type: string }
+          - { name: r, label: Réponse, type: text }
+      - { name: couleur, label: "Couleur (nude, terracotta ou noir)", type: string }
+
+  - name: options
+    label: Options
+    type: file
+    path: src/_data/options.json
+    format: json
+    list: true
+    fields:
+      - { name: nom, label: Option, type: string }
+      - { name: detail, label: Description, type: text }
+
+  - name: faq
+    label: Questions fréquentes
+    type: file
+    path: src/_data/faq.json
+    format: json
+    list: true
+    fields:
+      - { name: q, label: Question, type: string }
+      - { name: r, label: Réponse, type: text }
+
+  - name: temoignages
+    label: Témoignages
+    type: file
+    path: src/_data/temoignages.json
+    format: json
+    list: true
+    fields:
+      - { name: texte, label: Témoignage, type: text }
+      - { name: auteur, label: "Prénoms (ex. Sarah et Kevin)", type: string }

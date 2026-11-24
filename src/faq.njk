@@ -1,0 +1,14 @@
+---
+layout: base.njk
+title: Questions fréquentes
+description: "Prix, hôtel inclus, réservation, paiement, annulation, bilan de couple, garde d'enfants : toutes les réponses sur les escapades romantiques Les Noces d'Agapé."
+---
+<section class="page-head"><div class="wrap">
+  <p class="eyebrow">FAQ</p>
+  <h1>Questions fréquentes</h1>
+</div></section>
+<section class="section"><div class="wrap narrow">
+  {% for item in faq %}<details class="faq"{% if loop.first %} open{% endif %}><summary>{{ item.q }}</summary><p>{{ item.r }}</p></details>{% endfor %}
+  <p>Une autre question ? Écris-nous à <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+</div></section>
+<script type="application/ld+json">{{ {"@context":"https://schema.org","@type":"FAQPage","mainEntity": faqSchema} | json | safe }}</script>

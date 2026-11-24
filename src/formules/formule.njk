@@ -1,0 +1,31 @@
+---
+layout: base.njk
+pagination:
+  data: formules
+  size: 1
+  alias: f
+permalink: "/formules/{{ f.slug }}/"
+---
+<section class="page-head head-{{ f.couleur }}"><div class="wrap">
+  <p class="eyebrow"><a href="/formules/">Formules</a> / {{ f.nom }}</p>
+  <h1>Formule {{ f.nom }}</h1>
+  <p class="lead">{{ f.accroche }}</p>
+  <p class="prix big">{{ f.prix | euro }}<span>{{ f.prixMention }}</span></p>
+  <a class="btn" href="/demande/?formule={{ f.slug }}">Demander cette formule</a>
+</div></section>
+<section class="section"><div class="wrap split">
+  <div>
+    <h2>L'expérience</h2>
+    <p>{{ f.description }}</p>
+    <p><strong>Pour qui ?</strong> {{ f.pourQui }}</p>
+  </div>
+  <div>
+    <h2>Ce qui est inclus</h2>
+    <ul class="check">{% for i in f.inclus %}<li>{{ i }}</li>{% endfor %}</ul>
+  </div>
+</div></section>
+<section class="section alt"><div class="wrap narrow">
+  <h2>Questions sur la formule {{ f.nom }}</h2>
+  {% for item in f.faq %}<details class="faq"><summary>{{ item.q }}</summary><p>{{ item.r }}</p></details>{% endfor %}
+  <p><a class="link" href="/options/">Voir les options à ajouter</a> · <a class="link" href="/faq/">Toutes les questions</a></p>
+</div></section>

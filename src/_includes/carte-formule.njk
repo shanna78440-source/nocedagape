@@ -1,0 +1,16 @@
+<article class="card card-{{ f.couleur }}">
+  {% if f.photo %}<img class="card-img" src="{{ f.photo }}" alt="Formule {{ f.nom }}, escapade romantique" loading="lazy">{% endif %}
+  <div class="card-top">
+    <p class="eyebrow">Formule</p>
+    <h3>{{ f.nom }}</h3>
+    <p class="accroche">{{ f.accroche }}</p>
+    <p class="prix">{{ f.prix | euro }}<span>{{ f.prixMention }}</span></p>
+  </div>
+  <ul class="check">
+    {% for i in f.inclus | batch(5) | first %}<li>{{ i }}</li>{% endfor %}
+  </ul>
+  <div class="card-actions">
+    <a class="btn" href="/demande/?formule={{ f.slug }}">Demander cette formule</a>
+    <a class="link" href="/formules/{{ f.slug }}/">Tout voir</a>
+  </div>
+</article>

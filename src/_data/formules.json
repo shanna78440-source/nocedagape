@@ -1,0 +1,105 @@
+[
+  {
+    "slug": "elegance",
+    "nom": "Élégance",
+    "accroche": "La nuit de noces romantique, tout en douceur",
+    "prix": 350,
+    "prixMention": "tout compris, 1 nuit pour 2",
+    "couleur": "nude",
+    "hotel": "Hôtel 4 étoiles à Paris, chambre avec baignoire",
+    "pourQui": "Idéal pour une première nuit de noces ou une première escapade à deux après le mariage.",
+    "description": "Élégance réunit l'essentiel d'une nuit de noces réussie : une chambre d'hôtel 4 étoiles décorée pour vous, une box pleine d'attentions, un réveil gourmand et une séance de bilan de couple avec Georgia pour poser les bases de votre vie à deux.",
+    "inclus": [
+      "Une nuit en chambre d'hôtel 4 étoiles avec baignoire, à Paris",
+      "Décoration romantique de la chambre avant votre arrivée",
+      "Box Élégance (nude et rose poudré) : jeux de couple, coupons à gratter, bombe de bain, brume d'oreiller, masque ou gommage",
+      "Un carnet offert pour écrire vos souvenirs",
+      "Une séance de bilan de couple en visio avec Georgia",
+      "Petit déjeuner gourmand",
+      "Proposition et réservation d'un restaurant (repas à votre charge)",
+      "Départ tardif à 14 h, selon disponibilité de l'hôtel",
+      "10 % de réduction sur votre prochaine escapade"
+    ],
+    "faq": [
+      {
+        "q": "Le prix de 350 € comprend-il l'hôtel ?",
+        "r": "Oui. Les 350 € comprennent la nuit d'hôtel pour deux, la décoration, la box, le petit déjeuner et la séance de bilan de couple. Seul le repas au restaurant reste à votre charge."
+      },
+      {
+        "q": "Peut-on ajouter une balade en bateau-mouche ?",
+        "r": "Oui, la promenade en bateau-mouche avec portrait de couple et le cocktail en rooftop sont proposés en option, sur devis."
+      }
+    ],
+    "photo": ""
+  },
+  {
+    "slug": "evasion",
+    "nom": "Évasion",
+    "accroche": "Bien-être et dîner insolite pour vous reconnecter",
+    "prix": 490,
+    "prixMention": "tout compris, 1 nuit pour 2",
+    "couleur": "terracotta",
+    "hotel": "Hôtel 4 étoiles à Paris avec espace bien-être",
+    "pourQui": "Pour les couples qui veulent souffler, se détendre et sortir de la routine.",
+    "description": "Évasion vous emmène dans un hôtel 4 étoiles avec spa, hammam et sauna. Une chambre décorée façon deluxe, un accueil personnalisé, une box terracotta pensée pour la complicité et un dîner insolite réservé pour vous : tout est prêt pour lâcher prise.",
+    "inclus": [
+      "Une nuit en chambre d'hôtel 4 étoiles à Paris",
+      "Accès à l'espace bien-être : spa, hammam, sauna",
+      "Accueil personnalisé : fleur et ballon cœur",
+      "Décoration deluxe romantique de la chambre",
+      "Box Évasion (terracotta) : jeux de couple, dés coquins, bonbons mentholés, bandeau en satin, huile de massage",
+      "Tee-shirts duo offerts",
+      "Une séance de bilan de couple en visio avec Georgia",
+      "Petit déjeuner gourmet",
+      "Réservation d'un dîner insolite : dîner dans le noir ou croisière (repas à votre charge)",
+      "Départ tardif à 14 h, selon disponibilité de l'hôtel",
+      "10 % de réduction sur votre prochaine escapade"
+    ],
+    "faq": [
+      {
+        "q": "L'accès au spa est-il inclus dans Évasion ?",
+        "r": "Oui. Nous sélectionnons des hôtels dont l'espace bien-être (spa, hammam, sauna) est accessible aux clients de la chambre."
+      },
+      {
+        "q": "Le dîner est-il compris ?",
+        "r": "Nous réservons pour vous un dîner insolite, dans le noir ou en croisière. Le repas est réglé par le couple sur place."
+      }
+    ],
+    "photo": ""
+  },
+  {
+    "slug": "agape",
+    "nom": "Agapé",
+    "accroche": "L'expérience 5 étoiles, accueil VIP et vue sur Paris",
+    "prix": 700,
+    "prixMention": "tout compris, 1 nuit pour 2",
+    "couleur": "noir",
+    "hotel": "Hôtel 5 étoiles à Paris avec espace bien-être",
+    "pourQui": "Pour célébrer un moment fort : nuit de noces d'exception, anniversaire de mariage, renouvellement des vœux.",
+    "description": "Agapé, c'est notre formule signature, nommée d'après l'amour inconditionnel qui inspire Les Noces d'Agapé. Hôtel 5 étoiles, accueil VIP avec champagne, box noire raffinée et petit déjeuner gastronomique servi en chambre : chaque détail célèbre votre couple.",
+    "inclus": [
+      "Une nuit en chambre d'hôtel 5 étoiles à Paris",
+      "Accès à l'espace bien-être de l'hôtel",
+      "Accueil VIP : arrivée surprise et coupe de champagne en chambre",
+      "Décoration romantique de la chambre",
+      "Box Agapé (noire) : jeux de couple, coupons à gratter, dé coquin, chocolats, masque en dentelle et plume, huile de massage, masque au collagène",
+      "Bougies parfumées offertes",
+      "Une séance de bilan de couple en visio avec Georgia",
+      "Petit déjeuner gastronomique servi en chambre",
+      "Réservation d'un dîner avec vue sur Paris (repas à votre charge)",
+      "Départ tardif à 14 h, selon disponibilité de l'hôtel",
+      "10 % de réduction sur votre prochaine escapade"
+    ],
+    "faq": [
+      {
+        "q": "Peut-on ajouter un massage en duo ou un shooting photo ?",
+        "r": "Oui. Le massage en duo, le spa privatif et le shooting photo ou vidéo professionnel sont proposés en option, sur devis."
+      },
+      {
+        "q": "Agapé convient-il pour un anniversaire de mariage ?",
+        "r": "Oui, Agapé est pensé pour tous les grands moments du couple : nuit de noces, anniversaire de mariage, renouvellement des vœux."
+      }
+    ],
+    "photo": ""
+  }
+]

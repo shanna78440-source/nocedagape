@@ -1,0 +1,19 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# {{ site.nom | safe }}
+
+> {{ site.promesse | safe }}
+
+Fondatrice : {{ site.fondatrice }}. Zone : {{ site.zone }}. Contact : {{ site.email }}. Réponse aux demandes sous {{ site.delaiReponse }}. Paiement en une fois. {{ site.annulation | safe }}
+
+## Formules (prix pour une nuit à deux, hôtel inclus)
+{% for f in formules %}
+- [{{ f.nom }}]({{ ('/formules/' + f.slug + '/') | abs(site.url) }}) : {{ f.prix }} €. {{ f.hotel | safe }}. {{ f.pourQui | safe }}{% endfor %}
+
+## Pages utiles
+- [Options et activités en duo]({{ '/options/' | abs(site.url) }})
+- [Carte cadeau]({{ '/carte-cadeau/' | abs(site.url) }})
+- [Notre histoire]({{ '/notre-histoire/' | abs(site.url) }})
+- [Questions fréquentes]({{ '/faq/' | abs(site.url) }})

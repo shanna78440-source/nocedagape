@@ -1,0 +1,72 @@
+---
+layout: base.njk
+title: Les Noces d'Agapé
+description: "Escapades romantiques clés en main à Paris pour jeunes mariés et couples mariés : chambre d'hôtel 4 ou 5 étoiles décorée, box couple, bien-être et petit déjeuner, dès 350 € tout compris."
+---
+<section class="hero{% if site.photoAccueil %} hero-photo{% endif %}"{% if site.photoAccueil %} style="--hero:url('{{ site.photoAccueil }}')"{% endif %}>
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Escapades romantiques à Paris</p>
+    <h1>Ta nuit de noces, et toutes celles d'après, pensées dans les moindres détails</h1>
+    <p class="lead">{{ site.promesse }}</p>
+    <div class="actions">
+      <a class="btn" href="/demande/">Demander mon escapade</a>
+      <a class="btn btn-ghost" href="/formules/">Voir les formules</a>
+    </div>
+    <p class="reassure">Réponse sous {{ site.delaiReponse }} · Paiement sécurisé · Annulation gratuite jusqu'à J-7</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap narrow center">
+    <h2>Raviver la flamme, après le «&nbsp;oui&nbsp;»</h2>
+    <p>À toi, future mariée qui prépares ta première nuit de noces. À vous, couples mariés qui voulez vous retrouver. Les Noces d'Agapé organise pour vous une escapade romantique clés en main : vous n'avez plus qu'à arriver.</p>
+    <p>Se retrouver, se déconnecter du quotidien, se sentir privilégiés, sortir de la routine et partager un vrai moment d'intimité. Comme une fleur qu'on arrose, l'amour s'entretient pour grandir.</p>
+  </div>
+</section>
+
+<section class="section alt" id="formules">
+  <div class="wrap">
+    <h2 class="center">Trois formules, tout compris</h2>
+    <p class="center sub">Prix pour une nuit à deux, hôtel inclus. Seul le repas au restaurant reste à votre charge.</p>
+    <div class="cards">
+      {% for f in formules %}{% include "carte-formule.njk" %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2 class="center">Comment ça marche</h2>
+    <ol class="steps">
+      <li><strong>Tu choisis ta formule</strong>Choisis tes dates et remplis la demande en 2 minutes.</li>
+      <li><strong>Georgia te répond sous 24 h</strong>Elle confirme l'hôtel et les détails avec toi.</li>
+      <li><strong>Tu règles en ligne</strong>En une fois, par paiement sécurisé.</li>
+      <li><strong>On prépare tout</strong>Chambre décorée, box, bien-être, réservation du restaurant.</li>
+      <li><strong>Vous profitez</strong>Puis vous faites votre bilan de couple en visio avec Georgia.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap narrow center">
+    <h2>Ce qu'en disent les couples</h2>
+    {% for t in temoignages %}
+    <blockquote class="quote"><p>« {{ t.texte }} »</p><cite>{{ t.auteur }}</cite></blockquote>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <h2>Offrir une escapade aux mariés</h2>
+      <p>Témoins, famille, amis : la carte cadeau Les Noces d'Agapé est un cadeau de mariage original qui fait vraiment plaisir. Les mariés choisissent ensuite leurs dates.</p>
+      <a class="btn" href="/carte-cadeau/">Découvrir la carte cadeau</a>
+    </div>
+    <div>
+      <h2>Née d'une nuit de noces</h2>
+      <p>L'idée est venue à Georgia lors de sa propre nuit de noces, devant une chambre décorée et pleine de petites attentions. Elle a voulu que ce moment se perpétue dans le mariage.</p>
+      <a class="link" href="/notre-histoire/">Lire notre histoire</a>
+    </div>
+  </div>
+</section>
